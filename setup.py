@@ -35,7 +35,7 @@ for root, dirs, files in os.walk(hh):
 
 core_requirements = [
     "setuptools<=65",
-    "numpy>=1.25.2",
+    "numpy>=1.25.2,<=1.26.4",
     "scipy>=1.11.1",
     "pybullet>=3.2.6",
     "open3d>=0.10.0",
