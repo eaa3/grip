@@ -37,7 +37,7 @@ core_requirements = [
     "setuptools<=65",
     "numpy",
     "scipy>=1.11.1",
-    "git+https://github.com/bulletphysics/bullet3",
+    "git+https://github.com/bulletphysics/bullet3.git",
     "open3d>=0.10.0",
     "opencv-python>=4.9.0.80",
     "matplotlib>=3.3.4",
