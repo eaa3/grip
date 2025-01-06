@@ -35,15 +35,15 @@ for root, dirs, files in os.walk(hh):
 
 core_requirements = [
     "setuptools<=65",
-    "numpy>=1.25.2,<=1.26.4",
+    "numpy",
     "scipy>=1.11.1",
-    "pybullet>=3.2.6",
+    "git+https://github.com/bulletphysics/bullet3",
     "open3d>=0.10.0",
     "opencv-python>=4.9.0.80",
     "matplotlib>=3.3.4",
     # "ghalton==0.6.1",
     "pybullet-planning-eaa",
-    "trimesh==3.4",
+    "trimesh>=3.9.20",
     "xatlas>=0.0.7",
     "transforms3d>=0.4.1",
     "strenum",
