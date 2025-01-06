@@ -43,7 +43,7 @@ core_requirements = [
     "matplotlib>=3.3.4",
     # "ghalton==0.6.1",
     "pybullet-planning-eaa",
-    "trimesh>=3.4",
+    "trimesh==3.4",
     "xatlas>=0.0.7",
     "transforms3d>=0.4.1",
     "strenum",
