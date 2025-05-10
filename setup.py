@@ -34,7 +34,7 @@ for root, dirs, files in os.walk(hh):
             need_files.append(fn[1 + len(hh) :])
 
 core_requirements = [
-    "setuptools<=65",
+    "setuptools>=69.0.0",
     "numpy>=1.25.2,<=1.26.4",
     "scipy>=1.11.1",
     "pybullet>=3.2.6",
