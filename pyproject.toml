@@ -1,3 +1,32 @@
+[project]
+name = "gripx"
+version = "0.0.9"
+description = "Grip is a prototyping toolbox for manipulation research."
+readme = "README.md"
+requires-python = ">=3.7,<=3.12"
+authors = [
+    {name = "Ermano Arruda", email = "ermano.arruda@gmail.com"}
+]
+license = {text = "MIT"}
+dependencies = [
+    "setuptools>=69.0.0",
+    "numpy>=1.25.2,<=1.26.4",
+    "scipy>=1.11.1",
+    "pybullet>=3.2.6",
+    "open3d>=0.10.0",
+    "opencv-python>=4.9.0.80",
+    "matplotlib>=3.3.4",
+    "pybullet-planning-eaa",
+    "trimesh>=3.9.20",
+    "xatlas>=0.0.7",
+    "transforms3d>=0.4.1",
+    "strenum",
+]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [tool.ruff]
 target-version = "py312"
 select = [
@@ -66,35 +95,23 @@ ignored-modules = ["rclpy",
 disable = "W0631,W0603,W0221,W0102,C,logging-fstring-interpolation,line-too-long,fixme,broad-exception-caught,missing-module-docstring,too-many-instance-attributes,too-few-public-methods,too-many-arguments,too-many-locals,too-many-branches,too-many-statements,use-dict-literal,cyclic-import,duplicate-code,too-many-public-methods,too-many-nested-blocks"
 enable = "no-else-return,consider-using-in"
 
-[project]
+[tool.pixi.project]
 name = "gripx"
-version = "0.0.9"      # match whatever your setup.py says
-description = "…"
-readme = "README.md"
-requires-python = ">=3.12"
-dependencies = [
-    "setuptools>=69.0.0",
-    "numpy>=1.25.2,<=1.26.4",
-    "scipy>=1.11.1",
-    "pybullet>=3.2.6",
-    "open3d>=0.10.0",
-    "opencv-python>=4.9.0.80",
-    "matplotlib>=3.3.4",
-    # "ghalton==0.6.1",
-    "pybullet-planning-eaa",
-    "trimesh>=3.9.20",
-    "xatlas>=0.0.7",
-    "transforms3d>=0.4.1",
-    "strenum",
+channels = ["conda-forge"]
+platforms = ["linux-64"]
+preview = ["pixi-build"]
+
+[tool.pixi.package]          # ← note the prefix
+name = "gripx"
+version = "0.0.9.dev"
+
+[tool.pixi.package.build]
+backend = { name = "pixi-build-python", version = "*" }
+channels = [
+  "https://prefix.dev/pixi-build-backends",
+  "https://prefix.dev/conda-forge",
 ]
 
-[build-system]
-requires = ["setuptools>=61.0", "wheel"]
-build-backend = "setuptools.build_meta"
-
-# minimal pixi manifest
-[tool.pixi.project]
-name      = "gripx"
-channels  = ["conda-forge"]
-platforms = ["linux-64"]
-preview   = ["pixi-build"]
+[tool.pixi.package.host-dependencies]
+setuptools = ">=61"
+wheel      = "*"
