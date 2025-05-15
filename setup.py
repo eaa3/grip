@@ -59,6 +59,11 @@ setup(
     maintainer="Ermano Arruda",
     maintainer_email="ermano.arruda@gmail.com",
     license="MIT",
+    python_requires=">=3.7,<=3.12",
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.12",
+    ],
     install_requires=core_requirements,
     extras_require={
         "dev": [
