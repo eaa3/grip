@@ -1,13 +1,12 @@
 [project]
 name = "gripx"
-version = "0.0.9"
+version = "0.0.9.dev"
 description = "Grip is a prototyping toolbox for manipulation research."
 readme = "README.md"
 requires-python = ">=3.7,<3.13"
 authors = [
     {name = "Ermano Arruda", email = "ermano.arruda@gmail.com"}
 ]
-license = {text = "MIT"}
 dependencies = [
     "setuptools>=69.0.0",
     "numpy>=1.25.2,<=1.26.4",
