@@ -59,7 +59,7 @@ setup(
     maintainer="Ermano Arruda",
     maintainer_email="ermano.arruda@gmail.com",
     license="MIT",
-    python_requires=">=3.7,<=3.12",
+    python_requires=">=3.7,<3.13",
     classifiers=[
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.12",
