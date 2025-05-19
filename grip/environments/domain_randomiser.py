@@ -2,7 +2,7 @@ from ..io import get_data_path, log
 from ..robot import BulletRobot, BulletObject, BulletWorld
 import pybullet as p
 import numpy as np
-from typing import Union, Tuple, List, Callable
+from typing import Union, Tuple, List
 from dataclasses import dataclass, field
 
 base_dir = get_data_path()
