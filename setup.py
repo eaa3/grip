@@ -6,12 +6,6 @@ from setuptools import setup, find_packages
 package_name = "grip"
 share_dir = os.path.join("share", package_name)
 
-version_file = os.path.join(os.path.dirname(__file__), "grip/version.py")
-with open(version_file, "r") as f:
-    # use eval to get a clean string of version from file
-    __version__ = eval(f.read().strip().split("=")[-1])
-
-
 ### Crawl files
 setup_py_dir = os.path.dirname(os.path.realpath(__file__))
 
@@ -50,7 +44,7 @@ core_requirements = [
 
 setup(
     name=f"{package_name}x",
-    version=__version__,
+    version="0.0.12",
     description="Grip is a prototyping toolbox for manipulation research.",
     long_description=open("README.md").read(),
     url="https://github.com/eaa3/grip.git",
