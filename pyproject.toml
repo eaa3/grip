@@ -1,6 +1,6 @@
 [project]
 name = "gripx"
-dynamic = ["version"]
+version = "0.0.12"
 description = "Grip is a prototyping toolbox for manipulation research."
 readme = "README.md"
 requires-python = ">=3.7,<3.13"
@@ -21,10 +21,6 @@ dependencies = [
     "transforms3d>=0.4.1",
     "strenum",
 ]
-
-# configure dynamic metadata
-[tool.setuptools.dynamic]
-version = {attr = "grip.version:__version__"}
 
 [build-system]
 requires = ["setuptools>=61.0", "wheel"]
