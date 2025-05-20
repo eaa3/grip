@@ -1,5 +1,37 @@
+[project]
+name = "gripx"
+dynamic = ["version"]
+description = "Grip is a prototyping toolbox for manipulation research."
+readme = "README.md"
+requires-python = ">=3.7,<3.13"
+authors = [
+    {name = "Ermano Arruda", email = "ermano.arruda@gmail.com"}
+]
+dependencies = [
+    "setuptools>=69.0.0",
+    "numpy>=1.25.2,<=1.26.4",
+    "scipy>=1.11.1",
+    "pybullet>=3.2.6",
+    "open3d>=0.10.0",
+    "opencv-python>=4.9.0.80",
+    "matplotlib>=3.3.4",
+    "pybullet-planning-eaa",
+    "trimesh>=3.9.20",
+    "xatlas>=0.0.7",
+    "transforms3d>=0.4.1",
+    "strenum",
+]
+
+# configure dynamic metadata
+[tool.setuptools.dynamic]
+version = {attr = "grip.version:__version__"}
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [tool.ruff]
-target-version = "py310"
+target-version = "py312"
 select = [
   "F", # pyflakes
   "E",

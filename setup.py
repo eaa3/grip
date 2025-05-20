@@ -34,8 +34,8 @@ for root, dirs, files in os.walk(hh):
             need_files.append(fn[1 + len(hh) :])
 
 core_requirements = [
-    "setuptools<=65",
-    "numpy>=1.26.4",
+    "setuptools>=69.0.0",
+    "numpy>=1.25.2,<=1.26.4",
     "scipy>=1.11.1",
     "pybullet>=3.2.7",
     "open3d>=0.10.0",
@@ -58,6 +58,11 @@ setup(
     maintainer="Ermano Arruda",
     maintainer_email="ermano.arruda@gmail.com",
     license="MIT",
+    python_requires=">=3.7,<3.13",
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.12",
+    ],
     install_requires=core_requirements,
     extras_require={
         "dev": [
