@@ -27,20 +27,6 @@ for root, dirs, files in os.walk(hh):
             fn = root + "/" + fn
             need_files.append(fn[1 + len(hh) :])
 
-core_requirements = [
-    "setuptools>=69.0.0",
-    "numpy>=1.25.2,<=1.26.4",
-    "scipy>=1.11.1",
-    "pybullet>=3.2.7",
-    "open3d>=0.10.0",
-    "opencv-python>=4.9.0.80",
-    "matplotlib>=3.3.4",
-    "pybullet-planning-eaa",
-    "trimesh>=3.9.20",
-    "xatlas>=0.0.7",
-    "transforms3d>=0.4.1",
-    "strenum",
-]
 
 setup(
     name=f"{package_name}x",
@@ -52,30 +38,11 @@ setup(
     maintainer="Ermano Arruda",
     maintainer_email="ermano.arruda@gmail.com",
     license="MIT",
-    python_requires=">=3.7,<3.13",
+    python_requires=">=3.10,<3.13",
     classifiers=[
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.12",
     ],
-    install_requires=core_requirements,
-    extras_require={
-        "dev": [
-            "pytest",
-            "ipdb",
-            "black>=24,<=24.2.0",
-            "check-manifest>=0.49,<=0.49",
-            "pre-commit>=3.3.3,<=3.3.3",
-            "pylint>=2.16,<=2.17.5",
-            "pytest-cov>=4.1,<=4.1",
-            "pytest-mock>=3.10,<=3.11.1",
-            "pytest-runner<=6.0,>=6.0",
-            "pytest>=7.4,<=7.4",
-            "hypothesis>=6.82,<=6.82.2",
-            "ruff>=0.0.28,<=0.0.28",
-            "coverage>=7.2.7,<=7.3.0",
-            "sphinx",
-        ],
-    },
     tests_require=["pytest"],
     packages=find_packages(exclude=["test", "test.robot", "test.sensors"]),
     package_dir={"": "."},
